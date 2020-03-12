@@ -1,0 +1,30 @@
+enable
+configure terminal
+hostname SW-01
+banner motd "ACESSO PERMITIDO APENAS PARA LUCAS LINDO!!!"
+ip domain-name 1rede.local
+crypto key generate rsa general-keys modulus 1024
+enable secret hugolevy*enable
+service password-encryption
+ip default-gateway 192.168.0.1
+username hugolevy privilege 15 secret abninho1234
+username lucasjorge privilege 15 secret batata*0
+username leoalmeida privilege 15 secret 56789
+
+line console 0
+password hugolevy*console
+login local
+exit
+
+line vty 0 15
+password hugolevy*vty
+login local
+transport input ssh
+exit
+
+interface vlan 1
+no shutdown
+ip address 192.168.0.254 255.255.255.0
+description INTERFACE DE GERENCIAMENTO
+END
+wr
