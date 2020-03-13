@@ -1,0 +1,47 @@
+check list  SW
+
+hostname 
+banner 
+setar o dominio: 1rede.local
+crypto key: 1024
+senha da enable: hugolevy*enable
+criptografar senhas
+gateway
+definir 3 usuarios a dupla e do professor
+
+configurar a line console 
+senha: hugolevy*console
+
+configurar a vty
+senha: hugolevy*vty
+
+configurar a interface vlan 
+ip 192.168.0.254 255.255.255.0
+colocar a descrição INTERFACE DE GERENCIAMENTO
+
+
+
+check list  RT
+
+colocar hostname RTA
+senha da enable: hugolevy*enable
+encrypitar as senhas
+setar dominio
+crypto key: 1024
+banner
+
+configurar a line console 0
+senha: hugolevy*console
+
+configurar a vty 0 15
+password hugolevy*vty
+
+configurar a interface gigabitethernet 0/0
+ip 10.10.10.1 255.255.255.0
+colocar descrição
+
+configurar a interface gigabitethernet 0/1
+ip 10.10.11.1 255.255.255.0
+colocar descrição
+
+
