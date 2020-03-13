@@ -1,2 +1,2 @@
-# tpologia-em-dupla
+# topologia-em-dupla
 fazer topologia e script 
